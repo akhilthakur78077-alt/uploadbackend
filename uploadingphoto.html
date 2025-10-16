@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<style>
+        html, body, h2, form, label, input, button {
+            cursor: url('white rose.cur'), auto;
+        }
+        body{
+            background-image:url("custom light backgro.png"); height:800; width:800;
+            background-repeat:no-repeat;
+            background-size:cover;
+            cursor: url('white rose.cur'), auto;
+        }
+        .file-upload{
+            display:none;
+        }
+        .custom-label{
+            display:inline-table;
+            padding:10px 10px;
+            background:linear-gradient(to right,
+            #ff6f61, #ff9a8d,#f2d7d5
+            );               
+            color:#116a97;
+            border-radius:50px;
+            font-family:'Great Vibes', cursive;
+        }
+        button{
+            background:linear-gradient(to right,#E0E0E0,#333333);
+            color:#5c0637;
+            border-radius:60px;
+            transition: all 0.3s ease;
+            cursor: url("[Angel heart (red ver.)] link select.cur"), auto;
+        }
+        .custom-label:hover{
+            background:linear-gradient(to right,#8a0028,#be8fbe,#ff6f61);
+            cursor: url("[Angel heart (red ver.)] link select.cur"), auto;
+        }
+        button:hover{
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(161, 46, 95, 0.4);
+            background:linear-gradient(to right,#A12E5F, #d43115)
+        }
+
+    </style>
+</head> 
+<body>
+    <h2>Upload your beauty</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="image" class="custom-label">Select your true colors </label>
+        <input type="file" id="image" name="image" class="file-upload" accept="image/*" required>
+        <button type="submit">Reveal</button>
+    </form>
+</body>   
+</html>
